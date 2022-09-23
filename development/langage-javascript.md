@@ -6,32 +6,51 @@
 
 ## 🎓 J'ai compris et je peux expliquer
 
-- les `structures` de base du langage ❌ / ✔️
-- les normes `ecmascript` ❌ / ✔️
-- l'utilisation de l'`asynchrone` ❌ / ✔️
-- les spécifités du mot-clef `this` ❌ / ✔️
+- les `structures` de base du langage ✔️
+- les normes `ecmascript` ✔️
+- l'utilisation de l'`asynchrone` ❌
+- les spécifités du mot-clef `this` ❌
 
 ## 💻 Je code en Javascript
 
-### Un exemple de code commenté ❌ / ✔️
+### Un exemple de code commenté ✔️
 
-```javascript
-(e) => mc2;
-```
+<script>
+  // Récupération dans le DOM de l'élément bouton
+  let button = document.getElementById("button");
 
-### Utilisation dans un projet ❌ / ✔️
+  // définition de la fonction déclenchée par l'event listener 
+  let onButtonClick = function() {
+    let name = document.getElementById("name").value; //récupération de la valeur de l'attribut "name" d'un input
+    let lang = document.getElementById("lang").value; //récupération de la valeur de l'attribut "lang" d'un select
+    let greeting;//déclaration de la variable "greeting"
+    //structure conditionnelle pour afficher un message différent selon la valeur de "lang"
+    if (lang === "es") {
+        greeting = "Hola, " + name;
+    } else if (lang === "plt") {
+        greeting = "Ello-hay, " + name;
+    } else {
+        greeting = "Heyaz, " + name;
+    }
+    document.getElementById("message").textContent += greeting;  //insertion du bon message dans le DOM
+  };
+  // Step 3: Attach event listener to element
+  button.addEventListener("click", onButtonClick);//ajout sur le bouton de l'évènement qui déclenche la fonction lors d'un click
+  </script>
+
+### Utilisation dans un projet ❌
 
 [lien github](...)
 
 Description :
 
-### J'ai utilisé ce langage en production ❌ / ✔️
+### J'ai utilisé ce langage en production ❌
 
 [lien du projet](...)
 
 Description :
 
-### J'ai utilisé ce langage en environement professionnel ❌ / ✔️
+### J'ai utilisé ce langage en environement professionnel ❌
 
 Description :
 
@@ -39,7 +58,7 @@ Description :
 
 ### Titre
 
-- lien
+- https://learnjavascript.online/app.html
 - description
 
 ## 🚧 Je franchis les obstacles
